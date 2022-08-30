@@ -12,6 +12,9 @@ part "query_class/QueryRefetch.dart";
 part "query_class/QueryResult.dart";
 part "query_class/QueryState.dart";
 
+// useQuery does not provide caching solution
+// it will just help to store req data, loading state and refetch data whenever user wants, either from same widget or different
+
 QueryResult<T> useQuery<T>(QueryOptions<T> options) {
   final isFirst = useRef(true);
 
